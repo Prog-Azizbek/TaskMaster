@@ -1,0 +1,45 @@
+﻿<Window x:Class="TaskMaster.Views.AddTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление задачи" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Название:" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TitleTextBox" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Описание:" VerticalAlignment="Center" Margin="5" Grid.Row="1"/>
+        <TextBox x:Name="DescriptionTextBox" Grid.Column="1" Margin="5" Grid.Row="1"/>
+
+        <TextBlock Text="Дата дэдлайна:" VerticalAlignment="Center" Margin="5" Grid.Row="2"/>
+        <DatePicker x:Name="DueDatePicker" Grid.Column="1" Margin="5" Grid.Row="2"/>
+
+        <TextBlock Text="Время дэдлайна:" VerticalAlignment="Center" Margin="5" Grid.Row="3"/>
+        <TextBox x:Name="DueTimeTextBox" Grid.Column="1" Margin="5" Grid.Row="3"/>
+
+        <TextBlock Text="Приоритет:" VerticalAlignment="Center" Margin="5" Grid.Row="4"/>
+        <ComboBox x:Name="PriorityComboBox" Grid.Column="1" Margin="5" Grid.Row="4">
+            <ComboBoxItem Content="Низкий"/>
+            <ComboBoxItem Content="Средний"/>
+            <ComboBoxItem Content="Высокий"/>
+        </ComboBox>
+
+        <TextBlock Text="Коллекция:" VerticalAlignment="Center" Margin="5" Grid.Row="5"/>
+        <ComboBox x:Name="CategoryComboBox" Grid.Column="1" Margin="5" Grid.Row="5"
+                  ItemsSource="{Binding Collections}" DisplayMemberPath="Name"/>
+
+        <Button Content="Add Task" Grid.ColumnSpan="2" Margin="5,5,5,0" Grid.Row="6" Click="AddTaskButton_Click" Height="32" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

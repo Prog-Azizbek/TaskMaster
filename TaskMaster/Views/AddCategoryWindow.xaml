@@ -1,0 +1,13 @@
+﻿<!-- Views/AddCategoryWindow.xaml -->
+<Window x:Class="TaskMaster.Views.AddCategoryWindow"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     Title="Добавление категории" Height="200" Width="300">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Введите название:" Margin="5"/>
+            <TextBox x:Name="CategoryNameTextBox" Margin="5"/>
+            <Button Content="Добавить коллекцию" Click="AddCategoryButton_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

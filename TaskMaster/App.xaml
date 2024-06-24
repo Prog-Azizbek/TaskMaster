@@ -1,0 +1,13 @@
+﻿<Application x:Class="TaskMaster.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TaskMaster"
+             xmlns:converters="clr-namespace:TaskMaster.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <converters:EmptyStringToVisibilityConverter x:Key="EmptyStringToVisibilityConverter"/>
+        <converters:BoolToColorConverter x:Key="BoolToColorConverter"/>
+        <converters:PriorityToColorConverter x:Key="PriorityToColorConverter"/>
+        <converters:PriorityToTooltipConverter x:Key="PriorityToTooltipConverter"/>
+    </Application.Resources>
+</Application>
